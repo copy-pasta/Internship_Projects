@@ -1,7 +1,7 @@
 # Internship_Projects
 
 
-All infos concerning my work can be found here
+Project Descriptions 
 
 ______________________________________________
 
