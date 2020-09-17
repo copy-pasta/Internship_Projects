@@ -3,8 +3,10 @@
 
 All infos concerning my work can be found here
 
+______________________________________________
 
 1: "A chance of rain" - Composition for prepared Disklavier and SuperCollider
+
 
 How can one create room for randomness, while not loosing control?
 How can the the use of the Disklavier, a piano controlled by MIDI, break the limits imposed by human piano technique ? 
@@ -18,7 +20,7 @@ Piano preparation in collaboration with Prof. Markus Stange
 Performance: Jacqueline Butzinger(SuperCollider), Prof. Markus Stange (Improvisation)
 Audiofile: All rights belong to the „Hochschule für Musik Karlsruhe“
 
-
+_____________________________________________
 
 2:  __.__ Audiovisual Live Coding Performance
 
