@@ -21,7 +21,7 @@ Piano preparation in collaboration with Prof. Markus Stange
 
 Performance: Jacqueline Butzinger(SuperCollider), Prof. Markus Stange (Improvisation)
 
-Audiofile: All rights belong to the „Hochschule für Musik Karlsruhe“
+Audiofile: All rights belong to the „Hochschule für Musik Karlsruhe“ - Computerstudio
 
 Dropbox link to audio file: 
 
@@ -44,6 +44,9 @@ Processing Code: Jacqueline Butzinger, Patrick Borgeat
 SuperCollider Code: Jia Liu, Shu Ching Chong
 
 Live stream of performance with introduction by Prof. Cristoph Seibert:
+
 www.youtube.com/watch?v=HM1QDKCkfZA
+
 Time Code: 1:09:25 - 1:22:18
-All rights go to the „Hochschule für Musik Karlsruhe“
+
+All rights go to the „Hochschule für Musik Karlsruhe“ - Computerstudio
