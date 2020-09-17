@@ -23,7 +23,7 @@ Performance: Jacqueline Butzinger(SuperCollider), Prof. Markus Stange (Improvisa
 
 Audiofile: All rights belong to the „Hochschule für Musik Karlsruhe“ - Computerstudio
 
-Dropbox link to audio file: 
+Audiofile should be in the email i sent
 
 _____________________________________________
 
