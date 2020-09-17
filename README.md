@@ -16,8 +16,11 @@ The piece “A chance of rain” for prepared Disklavier and SuperCollider, exam
 Structurally the peace consists of various semi-random patterns, constrained solely by the definition of boundaries in which randomness and probability can control sonic parameters, such as note range, length, velocity etc. Markov chains dictate the flow between larger form parts. As the SuperCollider algorithms “play” the Disklavier’s keyboard, another layer of indeterminism is added by a performer improvising on the inside of the piano, altering the preparation in reaction to the Code. This offers the performer to explore piano techniques beyond the limits of a human player and enables the performer to shift the focus of his interaction away from the keys, to the inside of the piano. 
 
 Code: Jacqueline Butzinger
+
 Piano preparation in collaboration with Prof. Markus Stange
+
 Performance: Jacqueline Butzinger(SuperCollider), Prof. Markus Stange (Improvisation)
+
 Audiofile: All rights belong to the „Hochschule für Musik Karlsruhe“
 
 Dropbox link to audio file: 
@@ -35,7 +38,9 @@ Different Modes, triggered via Midi, change the rules by which these circles con
 In mode 1, lines are drawn only between the messages of the same sender. In mode 2, circles between different senders connect and in mode 3 there are no connections at all.
 
 Conception and Performance: Shu Ching Chong, Jia Liu and Jacqueline Butzinger
+
 Processing Code: Jacqueline Butzinger, Patrick Borgeat
+
 SuperCollider Code: Jia Liu, Shu Ching Chong
 
 Live stream of performance with introduction by Prof. Cristoph Seibert:
