@@ -5,7 +5,8 @@ Project Descriptions
 
 ______________________________________________
 
-[a chance of rain](Internship_Projects/A chance of rain/a_chance_of_rain.scd)
+[a chance of rain source code](https://github.com/copy-pasta/Internship_Projects/blob/master/A%20chance%20of%20rain/a_chance_of_rain.scd)
+
 1: "A chance of rain" - Composition for prepared Disklavier and SuperCollider
 
 
