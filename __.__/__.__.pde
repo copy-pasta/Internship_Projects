@@ -1,5 +1,6 @@
 
 /*
+Class file not included!
 SuperCollider Code to trigger network bubbles
  n = NetAddr("127.0.0.1", 12000);
  n.sendMsg("/something")
