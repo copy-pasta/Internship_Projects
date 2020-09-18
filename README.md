@@ -40,7 +40,7 @@ In mode 1, lines are drawn only between the messages of the same sender. In mode
 
 Conception and Performance: Shu Ching Chong, Jia Liu and Jacqueline Butzinger
 
-[Processing Code](https://github.com/copy-pasta/Internship_Projects/blob/master/__.__/__.__.pde) Jacqueline Butzinger, Patrick Borgeat
+[Processing Code:](https://github.com/copy-pasta/Internship_Projects/blob/master/__.__/__.__.pde) Jacqueline Butzinger, Mutex by Patrick Borgeat
 
 SuperCollider Code: Jia Liu, Shu Ching Chong
 
