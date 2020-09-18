@@ -1,7 +1,6 @@
-//SET UP
+//SET UP - Midi connection to Disklavier
 MIDIClient.init;
 m = MIDIOut.newByName("YAMAHA USB Device", "Port1");
-
 
 (
 v = Pbind(
@@ -13,16 +12,14 @@ v = Pbind(
 )
 )
 
-
 m.control(0, 64, 90);
-
-
 m.control(0, 64, 0);
+
 q = ();
 d = ();
 
-/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-//PATTERN DEFINITION
+///////////////////////////////////////////////////////////////////////////////
+//Definition of semi-random patterns
 ///////////////////////////////////////////////////////////////////////////////
 //0. Silence:
 
@@ -40,7 +37,6 @@ q[\silence_short] = Pbindf(v,
 	\dur, Pwhite(0.4, 1, 1),
 	\tempo, 1;)
 )
-
 
 
 //1. Pattern Dry: Rain Dance//////////////////////////////////////////////////////
@@ -71,8 +67,6 @@ q[\rain_drum_laut] = Pbindf(v,
 	\sustain, 10,
 );
 
-
-
 q[\rain_chant_2] = Pbindf(v,
 	\midinote, Pclump(2, Pshuf([41, 43, 42], inf)),
 	\dur, 1/2,
@@ -90,9 +84,8 @@ q[\rain_chant_2] = Pbindf(v,
 ~rain_dance = Pseq([~rain_dance_1, ~rain_dance_2], 1);
 
 )
+
 //2. Pattern rain_breaks_in_dry//////////////////////////////////////////////////////
-
-
 (
 q[\Arp_1] = Pbindf(v,
 	\midinote, Pclump(1, Pseq([87, 86, 83, 89, 81], inf) - 45),
@@ -103,11 +96,7 @@ q[\Arp_1] = Pbindf(v,
 );
 
 
-
 ~rain_arp = q[\Arp_1];
-
-
-
 
 
 q[\Arp_2] = Pbindf(v,
@@ -116,8 +105,6 @@ q[\Arp_2] = Pbindf(v,
 		\amp, Pseq([Pseq([0.2, 0.3], 20)]),
 	\tempo, Pseg(Pseq([Pwhite(0.4, 2)]),5),
 );
-
-
 
 
 q[\Arp_3] = Pbindf(v,
@@ -143,7 +130,6 @@ q[\zufallsprozess_17_leise] = Pbindf(v,
 );
 
 
-
 ~rain_arp_high = q[\Arp_2];
 ~rain_arp_high_2 = q[\Arp_3];
 ~rain_arp_high_2;
@@ -152,10 +138,7 @@ q[\zufallsprozess_17_leise] = Pbindf(v,
 ~kurz_tief_2_leise = Pfindur(0.5, q[\zufallsprozess_17_leise]);
 
 
-
 ~arps1 = Pseq([~kurz_tief_2_leise, q[\silence_long], q[\silence_long], ~rain_arp_high, q[\silence_long],q[\silence_long], q[\silence_short], ~kurz_tief_2_leise, q[\silence_long], ~kurz_tief_2_laut, q[\silence_long] , ~rain_arp_high_2, q[\silence_short], ~rain_arp_high, ~kurz_tief_2_laut, Pfindur(2, ~rain_laut), q[\silence_short], q[\silence_long], q[\silence_short], q[\silence_long]]);
-
-
 
 
 )
@@ -171,15 +154,12 @@ q[\nisel_1] = Pbindf(v,
 );
 
 
-
-
 q[\nisel_2] = Pbindf(v,
 	\midinote, Pclump(4,Pseq([89, 81], inf)),
 	\dur, 0.6,
 	\amp, 0.35,
 	\tempo,0.8,
 );
-
 
 
 q[\nisel_3] = Pbindf(v,
@@ -190,16 +170,12 @@ q[\nisel_3] = Pbindf(v,
 );
 
 
-
-
 q[\nisel_1_l] = Pbindf(v,
 	\midinote, Pclump(Prand([2, 8], inf),Pseq([87, 99, 108], inf)),
 	\dur, Pwhite(0.15, 0.25, 6),
 	\amp, 0.4,
 	\tempo, Pseg([0.2, 0.1], 1),
 );
-
-
 
 
 q[\nisel_2_l] = Pbindf(v,
@@ -210,7 +186,6 @@ q[\nisel_2_l] = Pbindf(v,
 );
 
 
-
 q[\nisel_3_l] = Pbindf(v,
 	\midinote, Pclump(Prand([2, 8], inf),Pseq([87, 99, 108], inf)) - 3,
 	\dur, Pwhite(0.15, 0.25, inf),
@@ -218,14 +193,12 @@ q[\nisel_3_l] = Pbindf(v,
 	\tempo, Pseg([0.2, 0.01], 1),
 );
 
-
 q[\nisel_4] = Pbindf(v,
 	\midinote, Pclump(4,Pwhite(98, 108, inf)),
 	\dur, 0.3,
 	\amp, 0.2,
 	\tempo,0.6,
 );
-
 
 d[\screw] = 0;
 
@@ -236,9 +209,6 @@ q[\Notes_with_screws] = Pbindf(v,
 	\tempo, 0.6,
 	\screw, Pfunc({|x| d[\screw] = x[\midinote]}),
 );
-
-
-
 
 (
 
@@ -255,13 +225,9 @@ q[\Notes_with_screws]
 )));
 
 
-
-
 ~nisel_rit = Pfindur(10, Ptpar([0, q[\nisel_1_l], 0.15, q[\nisel_2_l], 0.2, q[\nisel_3_l]]));
 
 )
-
-
 
 /////////////////////////////////////////////////////////////////////////////////
 //4. Hund
@@ -289,10 +255,6 @@ q[\more_rain_fast] = Pbindf(v,
 	\tempo, Pseg([Pseq([Pwhite(0.8, 1, 16)])],1),
 );
 
-
-
-
-
 q[\more_rain_slow] = Pbindf(v,
 	\midinote, Pclump(2, Pseq([87, 86, 83, 89, 81], inf) + Pseq([Pwhite(12, 24, 3), Pwhite(-6, 0, 3)], inf)) - 20,
 	\dur, Pseq([Pshuf([1/32], 100), 1]),
@@ -311,33 +273,16 @@ q[\more_rain_slow_2] = Pbindf(v,
 );
 
 
-
-
 ~more_rain_fast = q[\more_rain_fast];
 
 
 ~more_rain_slow = q[\more_rain_slow];
 ~more_rain_slow_2 = q[\more_rain_slow_2];
 
-
-
-
-
-
-
 )
-
-
-
-
-
-
-
 
 ////////////////////////////////////////////////////////////////////
 //6. Cloud Formationen
-
-
 
 (
 q[\zufallsprozess_12] = Pbindf(v,
@@ -346,9 +291,6 @@ q[\zufallsprozess_12] = Pbindf(v,
 	\amp, 0.6,
 	\tempo, Pseg([1, 0.1], 15),
 );
-
-
-
 
 q[\cloudformation_21] = Pbindf(v,
 	\midinote, Pclump(3, Pseq([64, 65, 66, 63, 67], inf)),
@@ -380,7 +322,6 @@ q[\cloudformation_22_other] = Pbindf(v,
 );
 
 
-
 q[\cloudformation_23] = Pbindf(v,
 	\midinote,Pclump(5, Pseq([71, 72, 74, 78, 79, 80, 81], inf)),
 	\dur, Prand([1, 2, 3, 4], inf),
@@ -399,7 +340,6 @@ q[\cloudformation_23_high] = Pbindf(v,
 	\sustain, 1,
 
 );
-
 
 
 q[\cloudformation_24] = Pbindf(v,
@@ -452,7 +392,6 @@ q[\cloudformation_interval_8] = Pbindf(v,
 
 );
 
-
 q[\cloudformation_interval_9] = Pbindf(v,
   \midinote, Pfunc({d[\cloud_midi]}) -  8,
 	\dur, Prand([0.1], 32),
@@ -504,9 +443,7 @@ q[\cloudformation_26] = Pbindf(v,
 ////////////////////////////////////////////////////////////////////
 //7. Kurze Motive
 
-
 (
-
 
 q[\zufallsprozess_16] = Pbindf(v,
 	\midinote, Pclump(1, Pseq([87, 86, 83, 89, 81], inf) - 41),
@@ -567,13 +504,8 @@ q[\zufallsprozess_10_d] = Pbindf(v,
 ~kurz_hoch_10 = Pfindur(3, q[\zufallsprozess_10_d]);
 ~kurz_nisel = Pfindur(0.15, ~nisel);
 
-
-
 Ppar([~kurz_nisel, ~kurz_hoch_9]);
 Pseq([~kurz_nisel, ~kurz_hoch_9]);
-
-
-
 )
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -593,8 +525,6 @@ q[\zufallsprozess_12_slow] = Pbindf(v,
 	\amp, Pwhite(0.2, 0.3),
 	\tempo, Pfunc({d[\zufall11_slow]}),
 );
-
-
 
 q[\zufallsprozess_11_fast] = Pbindf(v,
 	\midinote, Pclump(Pseq([4, 5], inf), Pseq([87, 86, 83, 89, 81], inf) + Pseq([Pwhite(-12, 0 , inf), Pwhite(-6, 0, 3)], inf)),
@@ -719,35 +649,16 @@ Pfindur(4, ~nisel);
 
 ////////////////////////////////////////////// Player
 
-
-
-
 ~deep = Pseq([~kurz_tief_1, q[\silence_short], ~kurz_tief_2, ~kurz_tief_2, ~kurz_tief_1, q[\silence_short], ~kurz_tief_2, q[\silence_long ]]);
 
 ~next_2 = Pseq([~link_slow, Pfindur(1, ~cloud_spaces), Pfindur(2, ~link_1), Pfindur(2, ~cloud_spaces)], 2);
 
-
-
-
 ~next_3 = Pseq([~kurz_hoch_7, Pseq([Pfindur(0.4, ~hund),~kurz_hoch_6, Pfindur(0.5, ~nisel), ~kurz_hoch_8], 1), Pfindur(~nisel)],3); //likt this
-
-
-
-
 
 ~intro2 = Pseq([Pfindur(1, ~littledrops), Pseq([q[\silence_short], Pfindur(0.1, ~nisel), Pfindur(1, ~rain_arp_high) , Pfindur(0.1, ~nisel), Pfindur(1, ~rain_arp_high_2)], 2),
 	q[\silence_short], Pfindur(0.5, ~more_rain_fast), ~nisel, ~nisel]);
 
-
-
-
-
-
-
 //working on the intro:
-
-
-
 
 (
 ~more_rain = Ppar([~more_rain_slow_2 , ~more_rain_slow]);
@@ -761,21 +672,13 @@ Pfindur(4, ~nisel);
 
 ~all = Pseq([~nisel, ~nisel_rit, q[\silence_long], Pfindur(3, ~link_slow), q[\silence_long], Pfindur(6, ~link_slow), ~cloud_spaces, ~next, ~next_3, ~nisel]);
 
-
 ~arps1;
 
-
 ~raining_men = Pseq([q[\silence_short], Pfindur(0.5, ~more_rain_fast), ~nisel, ~nisel]);
-
-
-
 
 Pseq([~intro1, ~arps1, ~more_rain, ~intro2, ~raining_men, ~all, ~ending]).play;
 
 )
-
-
-
 
 (
 ~splats = Pbindf(v,
@@ -802,8 +705,6 @@ Pseq([~intro1, ~arps1, ~more_rain, ~intro2, ~raining_men, ~all, ~ending]).play;
 	\tempo, 0.2,
 ).play;)
 
-
-
 (
 ~splats = Pbindf(v,
 	\midinote, - 12 + (Pseq([60, 59, 63, 62, 63, 62, 63, 62], 2)) ,
@@ -820,5 +721,3 @@ Pseq([~intro1, ~arps1, ~more_rain, ~intro2, ~raining_men, ~all, ~ending]).play;
 	\amp, 0.6,
 	\tempo, 1.2,
 ).play;)
-
-
