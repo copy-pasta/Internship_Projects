@@ -5,7 +5,6 @@ Project Descriptions
 
 ______________________________________________
 
-[a chance of rain source code](https://github.com/copy-pasta/Internship_Projects/blob/master/A%20chance%20of%20rain/a_chance_of_rain.scd)
 
 1: "A chance of rain" - Composition for prepared Disklavier and SuperCollider
 
@@ -17,7 +16,7 @@ How can one create a structure for improvisation to unfold within?
 The piece “A chance of rain” for prepared Disklavier and SuperCollider, examines the relationship between indeterminacy and planned composition and aims to explore the freedom a Disklavier offers a performer in interacting with a prepared piano. 
 Structurally the peace consists of various semi-random patterns, constrained solely by the definition of boundaries in which randomness and probability can control sonic parameters, such as note range, length, velocity etc. A finite state machine dictates the flow between larger form parts. As the SuperCollider algorithms “play” the Disklavier’s keyboard, another layer of indeterminism is added by a performer improvising on the inside of the piano, altering the preparation in reaction to the Code. This offers the performer to explore piano techniques beyond the limits of a human player and enables the performer to shift the focus of his interaction away from the keys, to the inside of the piano. 
 
-Code: Jacqueline Butzinger
+[Code:](https://github.com/copy-pasta/Internship_Projects/blob/master/A%20chance%20of%20rain/a_chance_of_rain.scd) Jacqueline Butzinger
 
 Piano preparation in collaboration with Prof. Markus Stange
 
@@ -41,7 +40,7 @@ In mode 1, lines are drawn only between the messages of the same sender. In mode
 
 Conception and Performance: Shu Ching Chong, Jia Liu and Jacqueline Butzinger
 
-Processing Code: Jacqueline Butzinger, Patrick Borgeat
+[Processing Code](https://github.com/copy-pasta/Internship_Projects/blob/master/__.__/__.__.pde) Jacqueline Butzinger, Patrick Borgeat
 
 SuperCollider Code: Jia Liu, Shu Ching Chong
 
