@@ -32,7 +32,7 @@ _____________________________________________
 
 How can one interact with this multi-medially connected world? 
 How can the World Wide Web help us foster collaboration no matter the geographic location? 
-\*__.__, the title being a symbolic representation of a waterdrop, is an audiovisual network performance based on the practice of Live Coding, seeking answers to these questions; questions that are becoming increasingly relevant in times of COVID-19.
+This audiovisual network performance, based on the practice of Live Coding, seeks answers to these questions; questions that are becoming increasingly relevant in times of COVID-19.
 The technical set up consists of three geographically separated computers, which are connected only via the internet. Messages, sent back and forth between the players with the OSC protocol, and information of the network itself, such as latency, drive audiovisual parameters inside SuperCollider and Processing. 
 Each circle on the screen represents an incoming message sent from another player. 
 Different Modes, triggered via Midi, change the rules by which these circles connect.
